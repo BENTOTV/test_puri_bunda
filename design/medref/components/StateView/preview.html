@@ -1,0 +1,17 @@
+<!-- @dsCard group="Feedback" height=560 width=880 subtitle="Loading · empty · error · rate-limited · load more" -->
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>StateView — preview</title></head>
+<body>
+<div style="display:grid;grid-template-columns:repeat(2,1fr);gap:16px;padding:16px">
+  <div class="mr-stack" style="padding:0" aria-busy="true" aria-label="Loading medications">
+    <div class="mr-skel"><i></i><i></i><i></i></div><div class="mr-skel"><i></i><i></i><i></i></div>
+    <div class="mr-more"><span class="mr-spin" aria-hidden="true"></span>Loading more…</div>
+  </div>
+  <div class="mr-state"><div class="disc"><svg class="mr-i " viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></div><h3>No medications found</h3><p>Nothing matches “xyzol”. Check the spelling or try a generic name.</p><button class="mr-btn secondary">Clear search</button></div>
+  <div class="mr-state error" role="alert"><div class="disc"><svg class="mr-i " viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 9a14 14 0 0 1 19 0M5.5 12.5a9.5 9.5 0 0 1 13 0M8.8 16a4.5 4.5 0 0 1 6.4 0"/><path d="M12 19.4v.1"/><path d="M3 3l18 18"/></svg></div><h3>Can’t connect</h3><p>Check your internet connection and try again.</p><button class="mr-btn primary">Try again</button></div>
+  <div class="mr-state limit" role="alert"><div class="disc"><svg class="mr-i " viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.2 2"/></svg></div><h3>Too many requests</h3><p>openFDA is limiting requests right now. Please wait a moment.</p><button class="mr-btn primary">Try again</button></div>
+</div>
+
+</body>
+</html>

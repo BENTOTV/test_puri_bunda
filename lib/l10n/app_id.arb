@@ -1,0 +1,64 @@
+{
+  "@@locale": "id",
+  "appTitle": "MedRef",
+
+  "medicationsTitle": "Obat",
+  "favoritesTitle": "Favorit",
+
+  "searchHint": "Cari nama merek atau generik",
+  "searchMinChars": "Ketik minimal 2 karakter untuk mencari",
+
+  "unknownManufacturer": "Produsen tidak diketahui",
+  "brandUnavailable": "Nama merek tidak tersedia",
+
+  "moreValues": "+{count} lainnya",
+
+  "sectionPurpose": "Kegunaan",
+  "sectionDosage": "Dosis",
+  "sectionWarnings": "Peringatan",
+  "sectionActiveIngredients": "Bahan aktif",
+
+  "notProvided": "Tidak tercantum pada label ini.",
+
+  "showMore": "Tampilkan lebih banyak",
+  "showLess": "Tampilkan lebih sedikit",
+
+  "emptySearchTitle": "Obat tidak ditemukan",
+  "emptySearchBody": "Tidak ada yang cocok dengan “{query}”. Periksa ejaan atau coba nama generik.",
+
+  "errorNetworkTitle": "Tidak dapat terhubung",
+  "errorNetworkBody": "Periksa koneksi internet Anda lalu coba lagi.",
+
+  "errorServerTitle": "Terjadi kesalahan",
+  "errorServerBody": "Silakan coba lagi sesaat lagi.",
+
+  "errorRateLimitTitle": "Terlalu banyak permintaan",
+  "errorRateLimitBody": "openFDA sedang membatasi permintaan. Mohon tunggu sebentar.",
+
+  "errorInvalidDataTitle": "Terjadi kesalahan",
+  "errorInvalidDataBody": "Kami tidak dapat membaca data ini. Silakan coba lagi.",
+
+  "retry": "Coba lagi",
+
+  "favoritesEmptyTitle": "Belum ada favorit",
+  "favoritesEmptyBody": "Ketuk ikon hati pada obat mana pun untuk menyimpannya di sini, bahkan saat offline.",
+
+  "browseMedications": "Jelajahi obat",
+  "clearSearch": "Hapus pencarian",
+
+  "addFavorite": "Tambah ke favorit",
+  "removeFavorite": "Hapus dari favorit",
+  "removedSnack": "Dihapus dari favorit",
+  "undo": "Urungkan",
+
+  "disclaimer": "Hanya untuk referensi. Data berasal dari basis data label openFDA publik dan bukan saran medis.",
+
+  "otcBadge": "OTC",
+  "rxBadge": "Rx",
+
+  "languageEnglish": "English",
+  "languageIndonesian": "Bahasa Indonesia",
+  "language": "Bahasa",
+
+  "lastUpdated": "Terakhir diperbarui {date}"
+}

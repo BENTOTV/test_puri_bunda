@@ -1,0 +1,65 @@
+<!-- @dsCard height=288 -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>MedRef</title>
+<style>
+  html, body { margin:0; height:100%; }
+  body { background:var(--bg); color:var(--ink); font-family:var(--font-sans); overflow:hidden; }
+  .cover { position:relative; width:960px; height:288px; overflow:hidden; }
+  .art { position:absolute; top:0; left:480px; width:480px; height:288px; overflow:hidden; }
+  .art svg { display:block; width:480px; height:288px; }
+  .brand { fill:var(--primary); }
+  .tint { fill:var(--primary-soft); }
+  .deep { fill:var(--ink); }
+  .fav { fill:var(--favorite); }
+  .blk { rx:var(--radius-lg); }
+  .cap { fill:var(--primary); }
+  .cap.cut { fill:var(--primary-soft); }
+  .cap.ink { fill:var(--bg); }
+  .words { position:absolute; left:var(--space-8); bottom:var(--space-8); max-width:440px; }
+  .name { margin:0; font-size:100px; line-height:.9; font-weight:700; letter-spacing:-.03em; color:var(--ink); }
+  .tag { margin:var(--space-3) 0 0 4px; font-size:14px; line-height:20px; color:var(--ink-muted); }
+</style>
+</head>
+<body>
+<div class="cover">
+<div class="art" aria-hidden="true">
+<svg viewBox="0 0 480 288" width="480" height="288">
+<!--
+  blocks      primary 144×248 slab bled off the top (the brand teal, largest) · primary-soft 160×176 (tint) · ink 128×216 bled off the right · favorite 48×24 capsule once (it only ever means "saved") — ≈38% of 960×288
+  arrangement one tall teal slab with satellites, bottoms on one line space-8 above the edge, space-4 gutters
+  pattern     capsules, from "a medication reference": radius-pill capsules (24×8 / 32×12) tilted 45° like tablets, scattered over the tint in primary, cut into the slab in primary-soft, into the ink block in bg
+  scales      sides in space-4 multiples; gutters space-4; corners radius-lg; capsule rx = half the short side (radius-pill)
+-->
+<rect class="brand blk" x="16" y="-16" width="144" height="272" rx="16"/>
+<rect class="tint blk" x="176" y="80" width="160" height="176" rx="16"/>
+<rect class="deep blk" x="352" y="40" width="144" height="216" rx="16"/>
+<rect class="fav" x="112" y="264" width="48" height="16" rx="8"/>
+<g transform="rotate(-45 88 150)">
+  <rect class="cap cut" x="56" y="120" width="40" height="14" rx="7"/>
+  <rect class="cap cut" x="96" y="160" width="28" height="10" rx="5"/>
+  <rect class="cap cut" x="40" y="176" width="32" height="12" rx="6"/>
+</g>
+<g transform="rotate(-45 256 168)">
+  <rect class="cap" x="208" y="120" width="40" height="14" rx="7"/>
+  <rect class="cap" x="264" y="128" width="28" height="10" rx="5"/>
+  <rect class="cap" x="232" y="160" width="32" height="12" rx="6"/>
+  <rect class="cap" x="280" y="176" width="24" height="8" rx="4"/>
+  <rect class="cap" x="216" y="200" width="28" height="10" rx="5"/>
+  <rect class="cap" x="256" y="224" width="40" height="14" rx="7"/>
+</g>
+<g transform="rotate(-45 416 148)">
+  <rect class="cap ink" x="384" y="104" width="32" height="12" rx="6"/>
+  <rect class="cap ink" x="400" y="160" width="40" height="14" rx="7"/>
+</g>
+</svg>
+</div>
+<div class="words">
+  <h1 class="name">MedRef</h1>
+  <p class="tag">Calm, clinical UI for browsing openFDA medication labels.</p>
+</div>
+</div>
+</body>
+</html>

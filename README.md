@@ -1,9 +1,26 @@
 # MedRef — Medication Reference
 
+![Flutter](https://img.shields.io/badge/Flutter-3.29.0-02569B?logo=flutter&logoColor=white)
+![Dart](https://img.shields.io/badge/Dart-3.7.0-0175C2?logo=dart&logoColor=white)
+![State management](https://img.shields.io/badge/state-Cubit%20%28flutter__bloc%29-4fd1c5)
+![Tests](https://img.shields.io/badge/tests-21%20passing-2ea44f)
+
 A Flutter app for browsing, searching and saving medication labels from the
 public [openFDA Drug Label API](https://open.fda.gov/apis/drug/label/).
 Built as a take-home technical exercise — **not medical advice**; every
 detail screen says so.
+
+## Contents
+
+- [Flutter version](#flutter-version)
+- [Setup](#setup)
+- [Running the app](#running-the-app)
+- [Running tests](#running-tests)
+- [Architecture overview](#architecture-overview)
+- [Localization](#localization)
+- [Known limitations](#known-limitations)
+- [Approximate time spent](#approximate-time-spent)
+- [What I'd improve with more time](#what-id-improve-with-more-time)
 
 ## Flutter version
 
@@ -82,19 +99,19 @@ real requests are sent against openFDA during tests.
 
 ```
 lib/
-  core/            theme tokens, Failure type + l10n mapper, small utils
+  core/               theme tokens, Failure type + l10n mapper, small utils
   data/
-    models/        MedicationSummary, MedicationDetail — defensive JSON parsing
-    services/       OpenFdaApiClient (HTTP + retry/backoff + Failure mapping)
-    repositories/   MedicationRepository, FavoritesRepository
+    models/           MedicationSummary, MedicationDetail — defensive JSON parsing
+    services/         OpenFdaApiClient (HTTP + retry/backoff + Failure mapping)
+    repositories/      MedicationRepository, FavoritesRepository
   features/
-    medications/    MedicationListCubit + ListScreen
-    detail/         DetailCubit + DetailScreen
-    favorites/      FavoritesCubit + FavoritesScreen
-    settings/       LocaleCubit (EN/ID switch)
-  widgets/          shared, design-system widgets (MedicationCard, StateView, …)
-  routing/          go_router StatefulShellRoute (2 tabs) + app shell/tab bar
-  l10n/             ARB source + generated AppLocalizations
+    medications/      MedicationListCubit + ListScreen
+    detail/           DetailCubit + DetailScreen
+    favorites/        FavoritesCubit + FavoritesScreen
+    settings/         LocaleCubit (EN/ID switch)
+  widgets/            shared, design-system widgets (MedicationCard, StateView, …)
+  routing/            go_router StatefulShellRoute (2 tabs) + app shell/tab bar
+  l10n/               ARB source + generated AppLocalizations
 ```
 
 - **State management:** Cubit (`flutter_bloc`) per feature. Business logic
@@ -182,5 +199,3 @@ Roughly 16–18 hours end to end: data/error-handling layer and theming
 - Promote shared rules (e.g. "what counts as a valid favorite") into a
   small domain/use-case layer once a second feature needs them — see the
   ADR's scaling section.
-#   t e s t _ p u r i _ b u n d a  
- 

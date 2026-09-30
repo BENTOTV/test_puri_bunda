@@ -1,0 +1,74 @@
+{
+  "@@locale": "en",
+  "appTitle": "MedRef",
+  "@appTitle": {"description": "Application title"},
+
+  "medicationsTitle": "Medications",
+  "favoritesTitle": "Favorites",
+
+  "searchHint": "Search brand or generic name",
+  "searchMinChars": "Type at least 2 characters to search",
+
+  "unknownManufacturer": "Unknown manufacturer",
+  "brandUnavailable": "Brand name unavailable",
+
+  "moreValues": "+{count} more",
+  "@moreValues": {
+    "placeholders": {"count": {"type": "int"}}
+  },
+
+  "sectionPurpose": "Purpose",
+  "sectionDosage": "Dosage",
+  "sectionWarnings": "Warnings",
+  "sectionActiveIngredients": "Active ingredients",
+
+  "notProvided": "Not provided in this label.",
+
+  "showMore": "Show more",
+  "showLess": "Show less",
+
+  "emptySearchTitle": "No medications found",
+  "emptySearchBody": "Nothing matches “{query}”. Check the spelling or try a generic name.",
+  "@emptySearchBody": {
+    "placeholders": {"query": {"type": "String"}}
+  },
+
+  "errorNetworkTitle": "Can’t connect",
+  "errorNetworkBody": "Check your internet connection and try again.",
+
+  "errorServerTitle": "Something went wrong",
+  "errorServerBody": "Please try again in a moment.",
+
+  "errorRateLimitTitle": "Too many requests",
+  "errorRateLimitBody": "openFDA is limiting requests right now. Please wait a moment.",
+
+  "errorInvalidDataTitle": "Something went wrong",
+  "errorInvalidDataBody": "We couldn’t read this data. Please try again.",
+
+  "retry": "Try again",
+
+  "favoritesEmptyTitle": "No favorites yet",
+  "favoritesEmptyBody": "Tap the heart on any medication to keep it here, even offline.",
+
+  "browseMedications": "Browse medications",
+  "clearSearch": "Clear search",
+
+  "addFavorite": "Add to favorites",
+  "removeFavorite": "Remove from favorites",
+  "removedSnack": "Removed from favorites",
+  "undo": "Undo",
+
+  "disclaimer": "For reference only. Data comes from the public openFDA label database and is not medical advice.",
+
+  "otcBadge": "OTC",
+  "rxBadge": "Rx",
+
+  "languageEnglish": "English",
+  "languageIndonesian": "Bahasa Indonesia",
+  "language": "Language",
+
+  "lastUpdated": "Last updated {date}",
+  "@lastUpdated": {
+    "placeholders": {"date": {"type": "String"}}
+  }
+}
