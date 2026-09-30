@@ -110,7 +110,8 @@ guessing.
 
 ## Testing strategy
 
-**Decision:** three tiers, matching the brief's minimum plus one bonus:
+**Decision:** four tiers, matching the brief's minimum plus both bonuses
+(widget tests; golden tests are the one left out — see below):
 
 1. **Unit tests** on `OpenFdaApiClient` (mocking `http.Client` with
    `mocktail`) — 200/404/5xx/transport-exception/malformed-body/429-retry
@@ -121,7 +122,16 @@ guessing.
    Loading→Success and Loading→Error on `retryFirstLoad()`, plus the
    "below 2 chars never calls the API" rule; `FavoritesCubit` covers the
    optimistic add, the rollback-on-persistence-failure path, and remove.
-3. **Widget smoke test** — confirms the full app (theming, routing,
+3. **Widget tests** — `ListScreen`: search debounce (asserting *no* fetch
+   inside the 400ms window and exactly one after, using
+   `WidgetTester.pump(duration)` to control the fake clock rather than
+   `pumpAndSettle`, which would hide the very race the test exists to
+   catch), scroll-triggered pagination (`ScrollPosition.jumpTo` to the
+   max extent, verifying the `skip`-offset fetch), and a favorite-toggle
+   round-trip. `DetailScreen`: the same favorite-toggle round-trip in the
+   app bar. Both mock `MedicationRepository` and `FavoritesRepository`
+   directly with `mocktail` rather than hitting real Cubits' internals.
+4. **Widget smoke test** — confirms the full app (theming, routing,
    localization, DI wiring) boots without throwing.
 
 **Trade-off:** no golden tests were added. The design system's tokens

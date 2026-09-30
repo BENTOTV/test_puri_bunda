@@ -3,7 +3,7 @@
 ![Flutter](https://img.shields.io/badge/Flutter-3.29.0-02569B?logo=flutter&logoColor=white)
 ![Dart](https://img.shields.io/badge/Dart-3.7.0-0175C2?logo=dart&logoColor=white)
 ![State management](https://img.shields.io/badge/state-Cubit%20%28flutter__bloc%29-4fd1c5)
-![Tests](https://img.shields.io/badge/tests-21%20passing-2ea44f)
+![Tests](https://img.shields.io/badge/tests-25%20passing-2ea44f)
 
 A Flutter app for browsing, searching and saving medication labels from the
 public [openFDA Drug Label API](https://open.fda.gov/apis/drug/label/).
@@ -90,6 +90,12 @@ This runs:
   below-minimum-length search guard.
 - `test/features/favorites/cubit/favorites_cubit_test.dart` — optimistic
   add/remove and rollback-on-persistence-failure.
+- `test/features/medications/view/list_screen_test.dart` — widget tests:
+  search debounce (no fetch inside the 400ms window, exactly one after),
+  scrolling near the end triggering pagination, and a favorite-toggle
+  round-trip on a list card.
+- `test/features/detail/view/detail_screen_test.dart` — widget test: a
+  favorite-toggle round-trip in the detail app bar.
 - `test/widget_test.dart` — a full-app smoke test.
 
 429/rate-limit behavior is simulated entirely with `mocktail` stubs — no
@@ -192,8 +198,6 @@ Roughly 16–18 hours end to end: data/error-handling layer and theming
   items, e.g. via Hive/Drift, so Favorites are genuinely fully offline.
 - Golden tests for `MedicationCard`, `DetailSection`, and `StateView` in
   both themes, to lock in the design system visually.
-- Widget tests for `ListScreen`/`DetailScreen` interaction flows (search
-  debounce, pagination trigger, favorite toggle round-trip).
 - Respect a `Retry-After` response header if openFDA ever adds one,
   instead of a fixed backoff schedule.
 - Promote shared rules (e.g. "what counts as a valid favorite") into a
